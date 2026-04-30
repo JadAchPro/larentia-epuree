@@ -92,6 +92,7 @@ img { max-width: 100%; height: auto; display: block; }
   line-height: 1.75;
   color: var(--grey);
   max-width: 600px;
+  text-align: justify;
 }
 .body-text--centered { margin-left: auto; margin-right: auto; }
 
@@ -299,8 +300,11 @@ body.hero-page { overflow: hidden; height: 100vh; }
 
 /* ===== INNER PAGES ===== */
 .page-header {
-  padding: clamp(90px, 10vw, 110px) var(--pad-x) clamp(16px, 2vw, 24px);
+  padding: clamp(90px, 10vw, 110px) var(--pad-x) 0;
   text-align: center;
+}
+.page-header .heading--xl {
+  margin-bottom: 0;
 }
 
 /* --- Phases (Expertise) --- */
@@ -344,6 +348,7 @@ body.hero-page { overflow: hidden; height: 100vh; }
   line-height: 1.7;
   max-width: 520px;
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 .phase__deliverable {
@@ -406,6 +411,7 @@ body.hero-page { overflow: hidden; height: 100vh; }
   color: var(--grey);
   line-height: 1.7;
   max-width: 560px;
+  text-align: justify;
 }
 
 /* --- Team / Vision --- */
@@ -427,6 +433,7 @@ body.hero-page { overflow: hidden; height: 100vh; }
   font-size: 15px;
   color: var(--grey);
   line-height: 1.7;
+  text-align: justify;
 }
 
 /* --- Contact --- */
@@ -494,6 +501,7 @@ body.hero-page { overflow: hidden; height: 100vh; }
 .legal-content p {
   font-size: 14px; color: var(--grey);
   line-height: 1.7; margin-bottom: 10px;
+  text-align: justify;
 }
 .legal-content a { border-bottom: 1px solid var(--grey-light); }
 .legal-content a:hover { color: var(--black); border-color: var(--black); }
