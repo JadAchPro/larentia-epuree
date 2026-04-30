@@ -197,6 +197,11 @@ img { max-width: 100%; height: auto; display: block; }
   border-bottom: 1.5px solid var(--black);
   padding-bottom: 2px;
 }
+/* Active on CTA: no border-bottom override */
+.nav__links a.nav__cta.active {
+  border-bottom: none;
+  padding-bottom: 10px;
+}
 
 /* Contact as black button */
 .nav__cta {
@@ -273,10 +278,10 @@ body.hero-page { overflow: hidden; height: 100vh; }
   filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.08));
 }
 
-/* Baseline text */
+/* Baseline text — positioned just below the painting */
 .hero__baseline {
   position: absolute;
-  bottom: clamp(40px, 6vh, 80px);
+  top: calc(50% + 18vh);
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -353,6 +358,49 @@ body.hero-page { overflow: hidden; height: 100vh; }
   color: var(--grey);
   font-style: italic;
   margin-left: 16px;
+}
+
+/* --- Expertise targets --- */
+.expertise-targets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.expertise-targets span {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey);
+  padding: 10px 20px;
+  border: 1px solid var(--grey-light);
+}
+
+/* --- Case studies --- */
+.case-study {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--grey-light);
+}
+.case-study:first-of-type { border-top: 1px solid var(--grey-light); }
+
+.case-study__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.case-study__type {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 16px;
+}
+.case-study__desc {
+  font-size: 15px;
+  color: var(--grey);
+  line-height: 1.7;
+  max-width: 560px;
 }
 
 /* --- Team / Vision --- */
