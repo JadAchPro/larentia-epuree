@@ -22,7 +22,7 @@
   var slides = document.querySelectorAll('.hero__slide');
   if (slides.length > 1) {
     var current = 0;
-    var interval = 6000; // 6 seconds per painting
+    var interval = 500; // 0.5 second per painting
 
     slides[0].classList.add('active');
 

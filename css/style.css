@@ -299,19 +299,24 @@ body.hero-page { overflow: hidden; height: 100vh; }
 
 /* ===== INNER PAGES ===== */
 .page-header {
-  padding: clamp(120px, 15vw, 180px) var(--pad-x) clamp(40px, 5vw, 60px);
+  padding: clamp(90px, 10vw, 110px) var(--pad-x) clamp(16px, 2vw, 24px);
   text-align: center;
 }
 
 /* --- Phases (Expertise) --- */
-.phases { margin-top: 48px; }
+.phases {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
 
 .phase {
-  display: grid;
-  grid-template-columns: 60px 1fr;
-  gap: 28px;
-  padding: 40px 0;
-  border-bottom: 1px solid var(--grey-light);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px 0;
+  border-top: 1px solid var(--grey-light);
   align-items: start;
 }
 .phase:first-child { border-top: 1px solid var(--grey-light); }
@@ -546,7 +551,8 @@ body.hero-page { overflow: hidden; height: 100vh; }
     max-width: 50vw;
   }
 
-  .phase { grid-template-columns: 40px 1fr; gap: 16px; padding: 28px 0; }
+  .phases { grid-template-columns: 1fr; }
+  .phase { padding: 28px 0; }
   .phase__num { font-size: 22px; }
 
   .form-row { grid-template-columns: 1fr; }
