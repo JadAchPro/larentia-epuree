@@ -242,6 +242,9 @@ img { max-width: 100%; height: auto; display: block; }
 .nav__burger.active span:nth-child(2) { opacity: 0; }
 .nav__burger.active span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
 
+/* Language switcher inside burger — hidden on desktop */
+.nav__lang-mobile { display: none; }
+
 /* ===== HERO — FULLSCREEN ===== */
 .hero {
   width: 100%;
@@ -623,21 +626,42 @@ body.hero-page { overflow: hidden; height: 100vh; }
     pointer-events: all;
   }
   .nav__links a {
-    font-size: 18px !important;
-    letter-spacing: 0.15em !important;
+    font-size: 13px !important;
+    letter-spacing: 0.18em !important;
     color: var(--black) !important;
   }
   .nav__links a.nav__cta {
     color: var(--white) !important;
+    font-size: 11px !important;
+    padding: 8px 20px !important;
   }
 
-  /* Language switcher mobile */
+  /* Language switcher in burger menu on mobile */
+  .nav__lang-mobile {
+    display: flex !important;
+    gap: 0;
+    align-items: center;
+    margin-top: 8px;
+  }
+  .nav__lang-mobile a {
+    font-size: 10px !important;
+    letter-spacing: 0.12em !important;
+    color: var(--grey) !important;
+    padding: 0 6px;
+  }
+  .nav__lang-mobile a.active-lang {
+    color: var(--black) !important;
+    font-weight: 600;
+  }
+  .nav__lang-mobile .lang-sep {
+    color: var(--grey-light);
+    margin: 0 2px;
+    font-size: 10px;
+  }
+
+  /* Hide fixed lang switcher on mobile */
   .lang-switcher {
-    bottom: 16px;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 11px;
+    display: none;
   }
 
   .hero__slide img {
