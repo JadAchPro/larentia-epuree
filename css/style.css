@@ -314,6 +314,26 @@ body.hero-page { overflow: hidden; height: 100vh; }
   padding-top: clamp(32px, 4vw, 48px);
 }
 
+/* Contact info under title */
+.contact-info {
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--grey);
+}
+.contact-info a {
+  color: var(--grey);
+  border-bottom: 1px solid var(--grey-light);
+  transition: color 0.3s, border-color 0.3s;
+}
+.contact-info a:hover {
+  color: var(--black);
+  border-color: var(--black);
+}
+.contact-sep {
+  margin: 0 12px;
+}
+
 /* --- Phases (Expertise) --- */
 .phases {
   margin-top: 48px;
