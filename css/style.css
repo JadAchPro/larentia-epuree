@@ -12,7 +12,7 @@
   --grey-pale: #F5F5F5;
 
   --pad-x: clamp(24px, 5vw, 80px);
-  --pad-section: clamp(80px, 10vw, 140px);
+  --pad-section: clamp(40px, 5vw, 64px);
 
   --font-body: 'Inter', -apple-system, sans-serif;
   --font-display: var(--font-cinzel);
@@ -308,10 +308,18 @@ body.hero-page { overflow: hidden; height: 100vh; }
 .page-header .heading--xl {
   margin-bottom: 0;
 }
+.page-header__line {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: 1px;
+  background: var(--black);
+  margin: 20px auto 0;
+}
 
 /* Reduce gap between page header and first section */
 .page-header + .section {
-  padding-top: clamp(32px, 4vw, 48px);
+  padding-top: clamp(24px, 3vw, 36px);
 }
 
 /* Contact info under title */
